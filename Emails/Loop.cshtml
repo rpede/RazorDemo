@@ -1,0 +1,10 @@
+@using RazorLight
+@inherits TemplatePage<Model>
+
+<h1>Loop</h1>
+
+<ul>
+@foreach (var value in Model.Array) {
+    <li>@value</li>
+}
+</ul>

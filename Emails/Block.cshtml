@@ -1,0 +1,9 @@
+@using RazorLight
+@inherits TemplatePage<Model>
+
+<h1>Explicit expression</h1>
+
+@{
+  var sum = Model.Array.Sum();
+}
+Sum: @sum

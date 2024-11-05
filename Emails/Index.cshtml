@@ -1,0 +1,15 @@
+@using RazorLight
+@using System.Text.Json
+@inherits TemplatePage<Tuple<string[], Model>>
+
+<h1>Razor Demo</h1>
+
+<h2>Model:</h2>
+<pre>@JsonSerializer.Serialize(Model.Item2)</pre>
+
+<h2>Demos:</h2>
+<ul>
+@foreach (var template in Model.Item1) {
+    <li><a href="/@template">@template</a></li>
+}
+</ul>
